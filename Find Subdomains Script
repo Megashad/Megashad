@@ -19,3 +19,4 @@ rm $url/recon/assets.txt
 echo "[+] Harvesting subdomains with Amass..."
 amass enum -d $url >> $url/recon/final.txt
 sort -u $url/recon/f.txt >> $url/recon/final.txt 
+rm $url/recon/f.txt
