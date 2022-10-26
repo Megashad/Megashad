@@ -15,3 +15,7 @@ echo "[+] Harvesting subdomains with AssetFinder..."
 assetfinder $url >> $url/recon/assets.txt
 cat $url/recon/assets.txt | grep $1 >> $url/recon/final.txt
 rm $url/recon/assets.txt
+
+echo "[+] Harvesting subdomains with Amass..."
+amass enum -d $url >> $url/recon/final.txt
+sort -u $url/recon/f.txt >> $url/recon/final.txt 
